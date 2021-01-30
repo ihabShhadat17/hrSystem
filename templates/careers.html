@@ -1,0 +1,84 @@
+{% extends 'partition/base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'forms/candidate_form.html' %}
+    <div id="content">
+
+        <h3 class="text-center"><strong>Careers</strong></h3>
+
+        <div class="card-header">
+            <p>liwwa is a marketplace lender whose mission is to deliver job and income growth in the communities we
+                serve.
+                We're growing rapidly and are hiring talented individuals from a range of backgrounds. Today, our
+                diverse
+                team is comprised of people from Palestine, the US, Jordan and Sweden - with backgrounds ranging
+                from
+                Applied Mathematics, Physics, Computer Science, and the social sciences. You can see our open
+                vacancies
+                below:</p>
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Engineering</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Credit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Customer Service </a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h3 class="text-center m-4"><strong>Engineering Careers</strong></h3>
+            To solve the chronic problem of SME financing in the Arab World, we must do financing and credit
+            assessment
+            in ways that are fundamentally different than the way traditional financial institutions do it.
+
+            liwwa already built machine learning algorithms that depend on behavioral analysis to replicate the
+            outcomes
+            of human credit assessment committees to a high degree of accuracy. More work remains to be done in
+            terms of
+            improving the data science behind those models, as well as on developing different ways of accessing
+            more
+            information to feed those automated credit assessment models, including optical character recognition
+            for
+            financial and bank statements, Point of Sale integration, social network integration, and other online
+            behavioral probes. To achieve our mission, the engineering team's goal is to produce a
+            socially-beneficial
+            and automated solution for assessing the creditworthiness of small businesses.
+
+            <h5 class="text-center m-4"><strong>Available Positions</strong></h5>
+            {% for job in jobs %}
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ job.title }}</h5>
+                        <p class="card-text">{{ job.description }}</p>
+                        <button class="btn btn-info float-right apply" job_id="{{ job.id }}">Click to apply!
+                        </button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_script %}
+    <script>
+
+        $(document).ready(function () {
+
+            $(".apply").on('click', function () {
+                $('#content').hide();
+                $('.candidate_form').show();
+                $('#job_id').val($(this).attr('job_id'))
+            });
+            $("#job_list").on('click', function () {
+                $('#content').show();
+                $('.candidate_form').hide();
+            });
+
+        });
+
+    </script>
+{% endblock %}

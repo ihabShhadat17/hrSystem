@@ -1,0 +1,40 @@
+{% extends 'partition/base.html' %}
+{% block content %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Experience Years</th>
+            <th scope="col">Department</th>
+            <th scope="col">Apply To</th>
+
+            <th scope="col">Resume File</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+
+
+        {% for candidate in candidates %}
+            <tr>
+                <th scope="row">{{ candidate.id }}</th>
+                <td>{{ candidate.full_name }}</td>
+                <td>{{ candidate.birth_date }}</td>
+                <td>{{ candidate.years_of_experience }}</td>
+                <td>{{ candidate.department_ID }}</td>
+                <td>{{ candidate.job_id.title }}</td>
+
+                <td><a href="{{ candidate.resume_file.url }}" download>download</a>
+                </td>
+
+            </tr>
+
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

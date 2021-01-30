@@ -1,0 +1,40 @@
+<form class="candidate_form" enctype="multipart/form-data" method="POST" action="{% url 'candidate:apply_to_job_api' %}"
+      style="display: none">
+    <input type="text" class="form-control" name="job_id" id="job_id" hidden>
+
+    <div class="col">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" name="full_name" id="full_name" required>
+    </div>
+
+    <div class="col">
+        <label for="birth">Birth Date</label>
+        <input type="date" class="form-control" name="birth_date" id="birth_date" required>
+    </div>
+    <div class="col">
+        <label for="birth">Years Of Experience</label>
+        <input type="number" min="0" max="100" class="form-control" name="years_of_experience" id="years_of_experience"
+               required>
+    </div>
+
+    <div class="col">
+        <label for="department_ID">Department</label>
+
+        <select class="custom-select" name="department_ID" id="department_ID" required>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="FI">Finance</option>
+        </select>
+    </div>
+    <div class="col mt-3">
+        <div class="custom-file"><input type="file" accept=".docx,.pdf" class="custom-file-input" id="resume_file"
+                                        name="resume_file" required><label class="custom-file-label" for="resumeFile">Upload
+            Your
+            Resume</label></div>
+    </div>
+    <div class="col mt-3">
+        <button id="job_list" class="btn btn-primary">Job List</button>
+
+        <button class="btn btn-info float-right " type="submit">Submit</button>
+    </div>
+</form>
