@@ -1,7 +1,7 @@
 # hrSystem
 ## Demo
 
-[![Demo Doccou alpha](https://github.com/ihabShhadat17/hrSystem/blob/main/demo/Screencast%202021-01-31%2000:07:24.mp4)](https://github.com/ihabShhadat17/hrSystem/blob/main/demo/Screencast%202021-01-31%2000:07:24.mp4)
+https://github.com/ihabShhadat17/hrSystem/blob/main/demo/Screencast%202021-01-31%2000:07:24.mp4
 
 
 This repo contain two django application for Hr System Job AND Candidates:
