@@ -1,0 +1,27 @@
+body {
+    background-color: #e7e7e7;
+}
+
+#liwwa-logo {
+    width: auto;
+    height: 50px;
+}
+
+.liwwa-navbar {
+    background-color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.card {
+    margin: 30px 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 3px 5px rgba(188, 198, 202, .2);
+}
+
+.card-header {
+    background-color: white;
+}
+
