@@ -10,6 +10,6 @@ This repo contain two django application for Hr System Job AND Candidates:
 APIView used by the candidate to upload their information.
 
 
-![Screenshot](demo/Screenshot from 2021-01-30 22-47-58.png)
+![Screenshot](https://github.com/ihabShhadat17/hrSystem/blob/main/demo/Screenshot%20from%202021-01-30%2022-47-58.png)
 
 
